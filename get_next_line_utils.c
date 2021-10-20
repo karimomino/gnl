@@ -6,7 +6,7 @@
 /*   By: kamin <kamin@42abudhabi.ae>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 04:36:36 by kamin             #+#    #+#             */
-/*   Updated: 2021/10/19 05:18:20 by kamin            ###   ########.fr       */
+/*   Updated: 2021/10/20 05:49:21 by kamin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
-	joined = (char *)malloc(len1 + len2 + 1);
+	joined = (char *)malloc((len1 + len2 + 1) * sizeof(char));
 	if (joined == NULL || !s1 || !s2)
 		return (NULL);
-	while (*s1)
+	while (*s1 != '\0')
 	{
 		*joined = *s1;
 		joined++;

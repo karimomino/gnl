@@ -1,11 +1,10 @@
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
+/*DELETE BELOW*/
 #ifndef BUFFER_SIZE
 # define BUFFER_SIZE 4
 #endif
-
-/*DELETE BELOW*/
 #include <fcntl.h>
 #include <stdio.h>
 /*DELETE ABOVE*/
