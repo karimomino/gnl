@@ -6,7 +6,7 @@
 /*   By: kamin <kamin@42abudhabi.ae>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 03:38:23 by kamin             #+#    #+#             */
-/*   Updated: 2021/10/20 19:09:22 by kamin            ###   ########.fr       */
+/*   Updated: 2021/10/24 22:54:40 by kamin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ char	*get_next_line(int fd)
 		else if (read_val > 0)
 		{
 			tmp = ft_strjoin(file_content, buff);
-			free(file_content);
+			//free(file_content);
 			file_content = tmp;
 			free(tmp);
 		}
