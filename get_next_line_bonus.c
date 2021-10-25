@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kamin <kamin@42abudhabi.ae>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/25 22:52:19 by kamin             #+#    #+#             */
-/*   Updated: 2021/10/26 03:10:15 by kamin            ###   ########.fr       */
+/*   Created: 2021/10/25 23:55:24 by kamin             #+#    #+#             */
+/*   Updated: 2021/10/26 03:08:46 by kamin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -86,10 +86,10 @@ int	ft_read_file_content(int fd, char **file_content)
 
 char	*get_next_line(int fd)
 {
-	static char	*file_content;
+	static char	*file_content[1024];
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	ft_read_file_content(fd, &file_content);
-	return (ft_line(&file_content));
+	ft_read_file_content(fd, &file_content[fd]);
+	return (ft_line(&file_content[fd]));
 }

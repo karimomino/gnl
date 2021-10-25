@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kamin <kamin@42abudhabi.ae>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/19 04:36:36 by kamin             #+#    #+#             */
-/*   Updated: 2021/10/25 23:03:07 by kamin            ###   ########.fr       */
+/*   Created: 2021/10/25 23:59:00 by kamin             #+#    #+#             */
+/*   Updated: 2021/10/26 03:06:30 by kamin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -58,6 +58,8 @@ char	*ft_strdup(const char *s1)
 	char	*dup;
 	int		len;
 
+	if (*s1 == '\0')
+		return (NULL);
 	len = ft_strlen(s1) + 1;
 	dup = (char *)malloc(len * sizeof(char));
 	if (!dup)
