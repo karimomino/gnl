@@ -7,6 +7,7 @@
 #endif
 #include <fcntl.h>
 #include <stdio.h>
+#include <string.h>
 /*DELETE ABOVE*/
 #include <unistd.h>
  #include <stdlib.h>

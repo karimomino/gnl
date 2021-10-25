@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kamin <kamin@42abudhabi.ae>                +#+  +:+       +#+        */
+/*   By: dfurneau <dfurneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 04:36:36 by kamin             #+#    #+#             */
-/*   Updated: 2021/10/24 22:57:46 by kamin            ###   ########.fr       */
+/*   Updated: 2021/10/25 00:16:05 by dfurneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,19 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		len1;
 	int		len2;
 	int		i;
-	int		j;
 
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
 	i = -1;
-	j = -1;
 	joined = (char *)malloc((len1 + len2 + 1) * sizeof(char));
 	if (joined == NULL || !s1 || !s2)
 		return (NULL);
-	while (s1[++j] != '\0')
+	while (s1[++i] != '\0')
 	{
-		*joined = s1[j];
+		*joined = s1[i];
 		joined++;
 	}
+	i = -1;
 	while (s2[++i])
 	{
 		*joined = s2[i];
@@ -47,6 +46,8 @@ size_t	ft_strlen(const char *s)
 	int	size;
 
 	size = 0;
+	if (!s)
+		return (size);
 	while (s[size] != '\0')
 	{
 		size++;
